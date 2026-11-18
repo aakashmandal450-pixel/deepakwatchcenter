@@ -19,12 +19,12 @@ ICON = {
  "mail": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>',
  "arrow": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
  "map": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3Z"/><path d="M9 3v15M15 6v15"/></svg>',
- "watch": '<svg viewBox="0 0 48 48" fill="none" stroke="#F15419" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="16" y="3" width="16" height="9" rx="2"/><rect x="16" y="36" width="16" height="9" rx="2"/><circle cx="24" cy="24" r="13"/><path d="M24 17v7l5 3"/></svg>',
- "tool": '<svg viewBox="0 0 48 48" fill="none" stroke="#77E7FE" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="13"/><path d="M24 11v4M24 33v4M11 24h4M33 24h4"/><path d="m31 9 8 8-6 6-8-8Z"/></svg>',
+ "watch": '<svg viewBox="0 0 48 48" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="16" y="3" width="16" height="9" rx="2"/><rect x="16" y="36" width="16" height="9" rx="2"/><circle cx="24" cy="24" r="13"/><path d="M24 17v7l5 3"/></svg>',
+ "tool": '<svg viewBox="0 0 48 48" fill="none" stroke="#C9D6E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="13"/><path d="M24 11v4M24 33v4M11 24h4M33 24h4"/><path d="m31 9 8 8-6 6-8-8Z"/></svg>',
 }
 
-LOGO = ('<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="14" fill="#F15419"/>'
-        '<circle cx="16" cy="16" r="10.5" fill="#0C0C0A"/><path d="M16 9v7l4.5 3" stroke="#77E7FE" stroke-width="2.4" '
+LOGO = ('<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle cx="16" cy="16" r="15" fill="#FFFFFF"/>'
+        '<circle cx="16" cy="16" r="12" fill="#9B2D20"/><path d="M16 9v7l4.5 3" stroke="#FFFFFF" stroke-width="2.6" '
         'stroke-linecap="round" fill="none"/></svg>')
 
 def head(title, desc, path, root=""):
@@ -42,7 +42,7 @@ def head(title, desc, path, root=""):
 <meta property="og:description" content="{desc}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{DOMAIN}{path}">
-<meta name="theme-color" content="#0C0C0A">
+<meta name="theme-color" content="#1034A6">
 <link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
 <link rel="preload" href="{root}assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{root}assets/style.css">
@@ -100,19 +100,19 @@ FOOT = f"""<footer class="site-footer">
 
 CLOCK = """<svg class="clock" viewBox="0 0 400 400" role="img" aria-labelledby="clock-t">
   <title id="clock-t">Illustration of a watch face showing the current time in Nepal</title>
-  <circle cx="200" cy="200" r="190" fill="#0C0C0A"/>
-  <circle cx="200" cy="200" r="168" fill="none" stroke="#34332E" stroke-width="2"/>
-  <g id="ticks" stroke="#F5F3EF" stroke-linecap="round">
+  <circle cx="200" cy="200" r="190" fill="#0B1A40"/>
+  <circle cx="200" cy="200" r="168" fill="none" stroke="#2B3F73" stroke-width="2"/>
+  <g id="ticks" stroke="#FFFFFF" stroke-linecap="round">
     __TICKS__
   </g>
-  <g font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="30" fill="#F5F3EF" text-anchor="middle">
+  <g font-family="Archivo, Arial, sans-serif" font-weight="800" font-size="30" fill="#FFFFFF" text-anchor="middle">
     <text x="200" y="88">12</text><text x="318" y="210">3</text><text x="200" y="332">6</text><text x="82" y="210">9</text>
   </g>
-  <text x="200" y="140" font-family="Manrope, Arial, sans-serif" font-weight="700" font-size="13" letter-spacing="3" fill="#77E7FE" text-anchor="middle">DHANGADHI</text>
-  <line id="hand-h" x1="200" y1="214" x2="200" y2="118" stroke="#F5F3EF" stroke-width="10" stroke-linecap="round" transform="rotate(305 200 200)"/>
-  <line id="hand-m" x1="200" y1="220" x2="200" y2="78" stroke="#F5F3EF" stroke-width="6" stroke-linecap="round" transform="rotate(60 200 200)"/>
-  <line id="hand-s" x1="200" y1="232" x2="200" y2="66" stroke="#F15419" stroke-width="2.5" stroke-linecap="round" transform="rotate(0 200 200)"/>
-  <circle cx="200" cy="200" r="9" fill="#F15419"/><circle cx="200" cy="200" r="3.5" fill="#0C0C0A"/>
+  <text x="200" y="140" font-family="Manrope, Arial, sans-serif" font-weight="700" font-size="13" letter-spacing="3" fill="#C9D6E8" text-anchor="middle">DHANGADHI</text>
+  <line id="hand-h" x1="200" y1="214" x2="200" y2="118" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" transform="rotate(305 200 200)"/>
+  <line id="hand-m" x1="200" y1="220" x2="200" y2="78" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" transform="rotate(60 200 200)"/>
+  <line id="hand-s" x1="200" y1="232" x2="200" y2="66" stroke="#E2543F" stroke-width="2.5" stroke-linecap="round" transform="rotate(0 200 200)"/>
+  <circle cx="200" cy="200" r="9" fill="#E2543F"/><circle cx="200" cy="200" r="3.5" fill="#0B1A40"/>
 </svg>"""
 import math
 ticks = []
@@ -131,80 +131,136 @@ INDEX = head("Deepak Watch Center | Watches and watch repair in Dhangadhi",
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-text">
       <p class="eyebrow">Bus Park Road, Dhangadhi</p>
-      <h1 id="hero-title">Deepak <span class="o">Watch</span> Center</h1>
-      <p class="lead">New watches with warranty, and repairs for almost every kind of watch, from modern to vintage. Trusted in Dhangadhi for over 30 years.</p>
+      <h1 id="hero-title">Deepak Watch Center</h1>
+      <p class="lead">New watches with warranty, and repairs for almost every kind of watch, from modern designs to vintage classics. Trusted in Dhangadhi for over 30 years.</p>
       <div class="actions">
-        <a class="btn btn-orange" href="tel:{TEL_M}">{ICON['phone']}Call {PHONE_M}</a>
+        <a class="btn btn-red" href="tel:{TEL_M}">{ICON['phone']}Call {PHONE_M}</a>
         <a class="btn btn-ghost" href="{DIRECTIONS}" rel="noopener noreferrer" target="_blank">{ICON['pin']}Get directions<span class="sr-only"> (opens Google Maps in a new tab)</span></a>
       </div>
     </div>
     <div class="hero-art">
       {CLOCK}
-      <p class="years" aria-hidden="true">30+<small>years in Dhangadhi</small></p>
+      <p class="years">30+<small>years in Dhangadhi</small></p>
     </div>
+  </section>
+
+  <section class="strip" aria-label="Highlights">
+    <ul class="wrap">
+      <li><b>30+ years</b><span>serving Dhangadhi</span></li>
+      <li><b>Warranty</b><span>on every new watch</span></li>
+      <li><b>All types</b><span>of watches repaired</span></li>
+      <li><b>4.4 / 5</b><span>on Google, 7 reviews</span></li>
+    </ul>
   </section>
 
   <section class="block" id="about" aria-labelledby="about-title">
-    <div class="wrap two about">
+    <div class="wrap two">
       <div>
         <p class="sec-label">About us</p>
-        <h2 id="about-title">Watches, sold and fixed with care</h2>
+        <h2 id="about-title">Dhangadhi's watch shop for over 30 years</h2>
       </div>
-      <div>
-        <p>Deepak Watch Center has served Dhangadhi for over 30 years. We sell a wide selection of quality watches, all backed by warranties, and we repair almost all types of watches, from modern designs to vintage classics.</p>
-        <p>Our focus is on precision, good craftsmanship and happy customers, whether you are buying a new watch or getting an old one fixed.</p>
-        <ul class="facts">
-          <li><span>In business</span><b>30+ years</b></li>
-          <li><span>New watches</span><b>With warranty</b></li>
-          <li><span>Repairs</span><b>Modern and vintage</b></li>
-        </ul>
+      <div class="about-text">
+        <p>Deepak Watch Center has been part of Dhangadhi for more than three decades, selling watches and repairing them for local customers.</p>
+        <p>We sell a wide selection of quality watches, and every one is backed by a warranty. We also repair almost all types of watches, from modern designs to vintage classics.</p>
+        <p>Our focus is on precision, good craftsmanship and happy customers. You will find us on Bus Park Road, Dhangadhi.</p>
       </div>
     </div>
   </section>
 
-  <section class="block on-orange" id="services" aria-labelledby="services-title">
+  <section class="block on-stone" id="services" aria-labelledby="services-title">
     <div class="wrap">
       <p class="sec-label">What we do</p>
       <h2 id="services-title">Our services</h2>
+      <p class="intro">Two things, done well for over 30 years: selling good watches and keeping them running.</p>
       <div class="services">
         <article class="service">
           {ICON['watch']}
           <h3>New watches</h3>
-          <p>A wide selection of quality watches. Every watch we sell comes with a warranty.</p>
-          <p>Stock changes often, so call us to ask whether a model is available.</p>
+          <p>Choose from a wide selection of quality watches in the shop.</p>
+          <ul>
+            <li>A warranty on every watch we sell</li>
+            <li>See and try watches in the shop</li>
+            <li>Call ahead to ask if a model is in stock</li>
+          </ul>
         </article>
         <article class="service">
           {ICON['tool']}
           <h3>Watch repair</h3>
-          <p>We repair almost all types of watches, from modern designs to vintage classics.</p>
-          <p>Not sure your watch can be fixed? Bring it to the shop and we will check it.</p>
+          <p>We repair almost all types of watches, old and new.</p>
+          <ul>
+            <li>Modern watches and vintage classics</li>
+            <li>Bring your watch in and we will check it</li>
+            <li>The cost is agreed with you before work starts</li>
+          </ul>
         </article>
       </div>
       <p class="note">Questions about a watch or a repair? Call <a href="tel:{TEL_M}">{PHONE_M}</a>.</p>
     </div>
   </section>
 
-  <section class="block" id="visit" aria-labelledby="visit-title">
+  <section class="block" id="repairs" aria-labelledby="repairs-title">
+    <div class="wrap">
+      <p class="sec-label">Repairs</p>
+      <h2 id="repairs-title">How a repair works</h2>
+      <ol class="steps">
+        <li><h3>Bring it in</h3><p>Visit the shop on Bus Park Road with your watch.</p></li>
+        <li><h3>We check it</h3><p>We look at the watch, tell you what needs fixing, and agree the cost and time with you.</p></li>
+        <li><h3>Pick it up</h3><p>Collect your watch from the shop when it is ready.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block on-stone" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <p class="sec-label">Reviews</p>
+      <h2 id="reviews-title">What customers say</h2>
+      <div class="rating">
+        <p class="score" aria-hidden="true">4.4</p>
+        <div>
+          <div class="stars" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21.1l1.6-7L2 9.3l7-.7Z" fill="#9B2D20" stroke="#0B1A40" stroke-width="1.2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21.1l1.6-7L2 9.3l7-.7Z" fill="#9B2D20" stroke="#0B1A40" stroke-width="1.2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21.1l1.6-7L2 9.3l7-.7Z" fill="#9B2D20" stroke="#0B1A40" stroke-width="1.2"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 2 3 6.6 7 .7-5.3 4.8 1.6 7L12 17.5 5.7 21.1l1.6-7L2 9.3l7-.7Z" fill="#9B2D20" stroke="#0B1A40" stroke-width="1.2"/></svg></div>
+          <p>Rated 4.4 out of 5 by 7 customers on Google (November 2026). Read the reviews, or leave your own after your visit.</p>
+          <div class="actions">
+            <a class="btn btn-red" href="{MAPS}" rel="noopener noreferrer" target="_blank">Read reviews on Google<span class="sr-only"> (opens in a new tab)</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <p class="sec-label">Questions</p>
+      <h2 id="faq-title">Common questions</h2>
+      <div class="faq">
+        <details><summary>Do new watches come with a warranty?</summary><p>Yes. Every new watch we sell comes with a warranty. The terms depend on the watch and are explained when you buy it.</p></details>
+        <details><summary>Can you repair old or vintage watches?</summary><p>Yes. We repair almost all types of watches, from modern designs to vintage classics. Bring the watch to the shop and we will check it.</p></details>
+        <details><summary>Where is the shop?</summary><p>On Bus Park Road, Dhangadhi, Kailali. On Google Maps, search for "Deepak Watch Center" or use the Plus Code PH3F+WJ Dhangadhi.</p></details>
+        <details><summary>When are you open?</summary><p>Please check our <a href="{MAPS}" rel="noopener noreferrer" target="_blank">Google Maps listing<span class="sr-only"> (opens in a new tab)</span></a> for today's hours, or call <a href="tel:{TEL_M}">{PHONE_M}</a>.</p></details>
+        <details><summary>Can I check whether a watch is in stock?</summary><p>Yes. Call <a href="tel:{TEL_M}">{PHONE_M}</a> or <a href="tel:{TEL_L}">{PHONE_L}</a> before you visit.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="block on-stone" id="visit" aria-labelledby="visit-title">
     <div class="wrap">
       <p class="sec-label">Visit us</p>
       <h2 id="visit-title">Find the shop</h2>
       <div class="visit-grid">
         <div>
           <ul class="contact-list">
-            <li>{ICON['pin']}<div><small>Address</small>{ADDRESS}<br><small>Plus Code: PH3F+WJ Dhangadhi</small></div></li>
-            <li>{ICON['phone']}<div><small>Mobile</small><a href="tel:{TEL_M}">{PHONE_M}</a></div></li>
-            <li>{ICON['phone']}<div><small>Landline</small><a href="tel:{TEL_L}">{PHONE_L}</a></div></li>
+            <li><span class="ic">{ICON['pin']}</span><div><small>Address</small><b>{ADDRESS}</b><br><small>Plus Code: PH3F+WJ Dhangadhi</small></div></li>
+            <li><span class="ic">{ICON['phone']}</span><div><small>Mobile</small><a href="tel:{TEL_M}">{PHONE_M}</a></div></li>
+            <li><span class="ic">{ICON['phone']}</span><div><small>Landline</small><a href="tel:{TEL_L}">{PHONE_L}</a></div></li>
           </ul>
-          <p class="hours">For today's opening hours, see our <a href="{MAPS}" rel="noopener noreferrer" target="_blank">Google Maps listing<span class="sr-only"> (opens in a new tab)</span></a> or call us.</p>
           <div class="actions">
-            <a class="btn btn-orange" href="{DIRECTIONS}" rel="noopener noreferrer" target="_blank">{ICON['arrow']}Get directions<span class="sr-only"> (opens Google Maps in a new tab)</span></a>
+            <a class="btn btn-red" href="{DIRECTIONS}" rel="noopener noreferrer" target="_blank">{ICON['arrow']}Get directions<span class="sr-only"> (opens Google Maps in a new tab)</span></a>
           </div>
         </div>
         <div class="map" id="map">
           <div class="map-consent">
             {ICON['map']}
             <p>The map is provided by Google. Loading it connects your browser to Google, which may set cookies. See our <a href="privacy.html#map">privacy policy</a>.</p>
-            <button class="btn btn-orange" id="load-map" type="button">Show map</button>
+            <button class="btn btn-red" id="load-map" type="button">Show map</button>
           </div>
         </div>
       </div>
@@ -287,7 +343,7 @@ NOTFOUND = head("Page not found | Deepak Watch Center", "This page could not be 
   <div class="wrap">
     <h1>Page not found</h1>
     <p class="updated">Sorry, this page does not exist.</p>
-    <p><a class="btn btn-orange" href="/">Go to the home page</a></p>
+    <p><a class="btn btn-red" href="/">Go to the home page</a></p>
   </div>
 </main>
 """ + FOOT
