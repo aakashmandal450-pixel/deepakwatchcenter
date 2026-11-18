@@ -58,7 +58,7 @@ def head(title, desc, path, root=""):
       <ul id="menu">
         <li><a href="{root or './'}#about">About</a></li>
         <li><a href="{root or './'}#services">Services</a></li>
-        <li><a href="{root or './'}#gallery">The shop</a></li>
+        <li><a href="{root or './'}#brands">Brands</a></li>
         <li><a href="{root or './'}#visit">Visit us</a></li>
         <li><a class="call" href="tel:{TEL_M}">Call {PHONE_M}</a></li>
       </ul>
@@ -86,7 +86,7 @@ FOOT = f"""<footer class="site-footer">
         <h2>Pages</h2>
         <ul>
           <li><a href="./#services">Services</a></li>
-          <li><a href="./#gallery">Inside the shop</a></li>
+          <li><a href="./#brands">Brands</a></li>
           <li><a href="./#visit">Visit us</a></li>
           <li><a href="privacy.html">Privacy and cookie policy</a></li>
           <li><a href="terms.html">Terms and conditions</a></li>
@@ -159,7 +159,7 @@ INDEX = head("Deepak Watch Center | Watches and watch repair in Dhangadhi",
 
   <section class="block" id="about" aria-labelledby="about-title">
     <div class="wrap split">
-      <img src="assets/img/gold-watch.jpg" width="572" height="737" alt="A gold-tone Casio wristwatch with a brown leather strap in its display box at Deepak Watch Center" loading="lazy">
+      <img src="assets/img/casio-vintage-gold.jpg" width="767" height="575" alt="A gold-face Casio digital watch on a steel bracelet, resting on a wooden table" loading="lazy">
       <div class="about-text">
         <p class="kicker">About the shop</p>
         <h2 id="about-title">Dhangadhi's watch shop, for three decades</h2>
@@ -181,7 +181,7 @@ INDEX = head("Deepak Watch Center | Watches and watch repair in Dhangadhi",
       <p class="intro">Two services, done carefully for over 30 years.</p>
       <div class="services">
         <article class="service">
-          <img src="assets/img/casio-display.jpg" width="762" height="571" alt="Two shelves of men's wristwatches in grey display boxes, with Casio tags" loading="lazy">
+          <img src="assets/img/casio-edifice.jpg" width="767" height="575" alt="A Casio Edifice chronograph with a black dial and steel bracelet on a dark background" loading="lazy">
           <div class="body">
             <h3>New watches</h3>
             <p>Choose from a wide selection of quality watches in the shop.</p>
@@ -193,7 +193,7 @@ INDEX = head("Deepak Watch Center | Watches and watch repair in Dhangadhi",
           </div>
         </article>
         <article class="service">
-          <img src="assets/img/titan-watch.jpg" width="572" height="762" alt="A Titan watch with a dark blue dial and silver mesh strap on a display cushion" loading="lazy">
+          <img src="assets/img/casio-gshock-ga.jpg" width="767" height="575" alt="Close-up of a grey Casio G-Shock with orange markings" loading="lazy">
           <div class="body">
             <h3>Watch repair</h3>
             <p>We repair almost all types of watches, old and new.</p>
@@ -209,18 +209,20 @@ INDEX = head("Deepak Watch Center | Watches and watch repair in Dhangadhi",
     </div>
   </section>
 
-  <section class="block" id="gallery" aria-labelledby="gallery-title">
+  <section class="block" id="brands" aria-labelledby="brands-title">
     <div class="wrap">
-      <p class="kicker">Inside the shop</p>
-      <h2 id="gallery-title">Come and have a look</h2>
-      <p class="intro">Photos from our shop on Bus Park Road.</p>
+      <p class="kicker">Brands we carry</p>
+      <h2 id="brands-title">Casio, Titan, Naviforce, Millennium, Bolano and more</h2>
+      <p class="intro">From everyday digital watches to dress watches and chronographs. Stock changes often, so call us to check a model before you visit.</p>
+      <ul class="brand-list" aria-label="Brands">
+        <li>Casio</li><li>Titan</li><li>Naviforce</li><li>Millennium</li><li>Bolano</li>
+      </ul>
       <div class="gallery">
-        <figure class="g1"><img src="assets/img/wall-display.jpg" width="762" height="571" alt="Wall of glass shelves full of wristwatches, with wall clocks above" loading="lazy"><figcaption>Watches and wall clocks</figcaption></figure>
-        <figure class="g2"><img src="assets/img/sunglasses.jpg" width="572" height="762" alt="A rotating stand of sunglasses inside the shop, with wall clocks behind" loading="lazy"><figcaption>Sunglasses</figcaption></figure>
-        <figure class="g3"><img src="assets/img/casio-display.jpg" width="762" height="571" alt="Men's watches in display boxes on glass shelves" loading="lazy"><figcaption>Boxed watches</figcaption></figure>
-        <figure class="g4"><img src="assets/img/gold-watch.jpg" width="572" height="737" alt="Close-up of a gold-tone Casio watch in its box" loading="lazy"><figcaption>Casio</figcaption></figure>
-        <figure class="g5"><img src="assets/img/titan-watch.jpg" width="572" height="762" alt="Close-up of a Titan watch with a blue dial" loading="lazy"><figcaption>Titan</figcaption></figure>
+        <figure class="g1"><img src="assets/img/casio-gshock-dw.jpg" width="767" height="575" alt="A black Casio G-Shock digital watch against a dark grey background" loading="lazy"><figcaption>Casio G-Shock</figcaption></figure>
+        <figure class="g2"><img src="assets/img/casio-vintage-silver.jpg" width="767" height="575" alt="A silver Casio digital watch with a steel bracelet on a stone surface" loading="lazy"><figcaption>Casio Vintage</figcaption></figure>
+        <figure class="g3"><img src="assets/img/casio-diver.jpg" width="767" height="575" alt="A Casio analog diver-style watch with a black dial and steel bracelet" loading="lazy"><figcaption>Casio analog</figcaption></figure>
       </div>
+      <p class="credit">Example photos of Casio models from Unsplash, not of our own stock. Photographers are credited in our <a href="terms.html#photo-credits">terms</a>.</p>
     </div>
   </section>
 
@@ -354,6 +356,9 @@ TERMS = head("Terms and conditions | Deepak Watch Center",
 
     <h2>Liability</h2>
     <p>We are not liable for any loss caused by relying on information on this website. This does not limit any rights you have under Nepali law as a customer.</p>
+
+    <h2 id="photo-credits">Photo credits</h2>
+    <p>Photos of the shop were taken and published by Deepak Watch Center. Example brand photos are from Unsplash and used under the Unsplash License: Casio G-Shock by Kilyan Sockalingum, Casio G-Shock close-up by Alexandru-Bogdan Ghita, gold Casio by Olga Nayda, silver Casio by Pavlo, Casio analog by Badreddine Farhi, Casio Edifice by Jayanth Muppaneni.</p>
 
     <h2>Law</h2>
     <p>These terms are governed by the laws of Nepal.</p>
