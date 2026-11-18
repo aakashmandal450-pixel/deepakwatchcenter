@@ -27,7 +27,7 @@ LOGO = ('<svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><circle c
         '<circle cx="16" cy="16" r="10.5" fill="#0C0C0A"/><path d="M16 9v7l4.5 3" stroke="#77E7FE" stroke-width="2.4" '
         'stroke-linecap="round" fill="none"/></svg>')
 
-def head(title, desc, path):
+def head(title, desc, path, root=""):
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,22 +43,22 @@ def head(title, desc, path):
 <meta property="og:type" content="website">
 <meta property="og:url" content="{DOMAIN}{path}">
 <meta name="theme-color" content="#0C0C0A">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="/assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="/assets/style.css">
-<script src="/assets/site.js" defer></script>
+<link rel="icon" href="{root}favicon.svg" type="image/svg+xml">
+<link rel="preload" href="{root}assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="{root}assets/style.css">
+<script src="{root}assets/site.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="logo" href="/" aria-label="Deepak Watch Center, home">{LOGO}<span>Deepak <b>Watch</b> Center</span></a>
+    <a class="logo" href="{root or './'}" aria-label="Deepak Watch Center, home">{LOGO}<span>Deepak <b>Watch</b> Center</span></a>
     <nav class="nav" aria-label="Main">
       <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">Menu</button>
       <ul id="menu">
-        <li><a href="/#about">About</a></li>
-        <li><a href="/#services">Services</a></li>
-        <li><a href="/#visit">Visit us</a></li>
+        <li><a href="{root or './'}#about">About</a></li>
+        <li><a href="{root or './'}#services">Services</a></li>
+        <li><a href="{root or './'}#visit">Visit us</a></li>
         <li><a class="call" href="tel:{TEL_M}">Call {PHONE_M}</a></li>
       </ul>
     </nav>
@@ -84,10 +84,10 @@ FOOT = f"""<footer class="site-footer">
       <div>
         <h2>Pages</h2>
         <ul>
-          <li><a href="/#services">Services</a></li>
-          <li><a href="/#visit">Visit us</a></li>
-          <li><a href="/privacy.html">Privacy and cookie policy</a></li>
-          <li><a href="/terms.html">Terms and conditions</a></li>
+          <li><a href="./#services">Services</a></li>
+          <li><a href="./#visit">Visit us</a></li>
+          <li><a href="privacy.html">Privacy and cookie policy</a></li>
+          <li><a href="terms.html">Terms and conditions</a></li>
         </ul>
       </div>
     </div>
@@ -203,7 +203,7 @@ INDEX = head("Deepak Watch Center | Watches and watch repair in Dhangadhi",
         <div class="map" id="map">
           <div class="map-consent">
             {ICON['map']}
-            <p>The map is provided by Google. Loading it connects your browser to Google, which may set cookies. See our <a href="/privacy.html#map">privacy policy</a>.</p>
+            <p>The map is provided by Google. Loading it connects your browser to Google, which may set cookies. See our <a href="privacy.html#map">privacy policy</a>.</p>
             <button class="btn btn-orange" id="load-map" type="button">Show map</button>
           </div>
         </div>
@@ -282,7 +282,7 @@ TERMS = head("Terms and conditions | Deepak Watch Center",
 </main>
 """ + FOOT
 
-NOTFOUND = head("Page not found | Deepak Watch Center", "This page could not be found.", "/404.html") + f"""
+NOTFOUND = head("Page not found | Deepak Watch Center", "This page could not be found.", "/404.html", root="/") + f"""
 <main id="main" class="legal">
   <div class="wrap">
     <h1>Page not found</h1>
