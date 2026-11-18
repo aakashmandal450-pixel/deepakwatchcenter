@@ -210,3 +210,32 @@ section.block{padding:clamp(72px,9vw,120px) 0}
   .btn,.gallery img,.faq summary::after{transition:none}
   .btn:active{transform:none}
 }
+
+/* brand tabs */
+.brand-tabs{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 28px}
+.brand-tab{font:600 19px var(--serif);display:inline-flex;align-items:center;gap:10px;padding:11px 22px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);cursor:pointer;transition:transform 160ms var(--ease-out),background-color 200ms ease,color 200ms ease}
+.brand-tab:active{transform:scale(.97)}
+.brand-tab .count{font:700 12.5px var(--sans);color:var(--muted)}
+.brand-tab[aria-selected="true"]{background:var(--green);color:var(--cream);border-color:var(--green)}
+.brand-tab[aria-selected="true"] .count{color:var(--sage)}
+@media (hover:hover) and (pointer:fine){.brand-tab:hover{border-color:var(--green)}}
+.brand-panel:focus-visible{outline-offset:8px}
+.brand-blurb{color:var(--muted);margin-bottom:18px}
+.shots{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.shot{display:block;width:100%;padding:0;border:0;background:var(--paper-2);border-radius:6px;overflow:hidden;cursor:zoom-in;position:relative;text-align:left;font:inherit;color:inherit}
+.shot img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;transition:transform 400ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.shot:hover img{transform:scale(1.04)}}
+.shot span{position:absolute;left:10px;bottom:10px;background:rgba(23,25,28,.82);color:#fff;font-size:13.5px;font-weight:600;padding:5px 10px;border-radius:4px}
+.empty{border:1px dashed rgba(23,25,28,.3);border-radius:8px;padding:34px;max-width:720px;background:#fff}
+.empty p{color:var(--muted);font-size:18.5px}
+.empty b{color:var(--ink)}
+.brand-panel[hidden]{display:none}
+.lightbox{border:0;padding:0;background:transparent;max-width:min(1100px,94vw);max-height:92vh;overflow:visible}
+.lightbox::backdrop{background:rgba(10,12,14,.86)}
+.lightbox figure{margin:0}
+.lightbox img{max-width:100%;max-height:82vh;width:auto;height:auto;border-radius:6px;display:block;margin:0 auto}
+.lightbox figure{text-align:center}
+.lightbox figcaption{display:inline-block;color:#fff;background:#17191C;padding:6px 14px;border-radius:4px;margin-top:12px;font-weight:600}
+.lb-close{position:absolute;top:-48px;right:0;background:#fff;color:var(--ink);border:0;border-radius:999px;padding:8px 18px;font:700 15px var(--sans);cursor:pointer}
+.lb-close:focus-visible{outline-color:#fff}
+@media (prefers-reduced-motion:reduce){.brand-tab,.shot img{transition:none}}
