@@ -3,6 +3,7 @@ Run: python3 build.py  (outputs index.html, privacy.html, terms.html, 404.html)"
 
 DOMAIN = "https://deepakwatchcenter.com.np"
 PHONE_M = "984-8420742"; TEL_M = "+9779848420742"
+WA = "https://wa.me/9779848420742"
 PHONE_L = "091-525060";  TEL_L = "+97791525060"
 ADDRESS = "Bus Park Road, Dhangadhi, Kailali, Sudurpashchim Province 10900, Nepal"
 MAPS = "https://maps.app.goo.gl/YZKGEJjhBLyE1cfY9"
@@ -18,6 +19,7 @@ ICON = {
  "pin": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>',
  "mail": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>',
  "arrow": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M5 12h14M13 6l6 6-6 6"/></svg>',
+ "chat": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 11.5a8.4 8.4 0 0 1-12.5 7.4L3 20.5l1.6-5.3A8.5 8.5 0 1 1 21 11.5Z"/><path d="M9 9.5c.3 2.2 2.3 4.3 4.6 4.8"/></svg>',
  "map": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3Z"/><path d="M9 3v15M15 6v15"/></svg>',
  "watch": '<svg viewBox="0 0 48 48" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="16" y="3" width="16" height="9" rx="2"/><rect x="16" y="36" width="16" height="9" rx="2"/><circle cx="24" cy="24" r="13"/><path d="M24 17v7l5 3"/></svg>',
  "tool": '<svg viewBox="0 0 48 48" fill="none" stroke="#C9D6E8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="13"/><path d="M24 11v4M24 33v4M11 24h4M33 24h4"/><path d="m31 9 8 8-6 6-8-8Z"/></svg>',
@@ -79,6 +81,7 @@ FOOT = f"""<footer class="site-footer">
         <ul>
           <li>{ADDRESS}</li>
           <li>Mobile: <a href="tel:{TEL_M}">{PHONE_M}</a></li>
+          <li>WhatsApp: <a href="{WA}" rel="noopener noreferrer" target="_blank">{PHONE_M}<span class="sr-only"> (opens in a new tab)</span></a></li>
           <li>Landline: <a href="tel:{TEL_L}">{PHONE_L}</a></li>
         </ul>
       </div>
@@ -274,14 +277,19 @@ INDEX = head("Deepak Watch Center | Watches and watch repair in Dhangadhi",
       <h2 id="visit-title">Find the shop</h2>
       <div class="visit">
         <div>
-          <img class="store" src="assets/img/storefront.jpg" width="762" height="428" alt="Front of the shop with its sign reading Deepak Watch Center in Nepali, above a blue shutter" loading="lazy">
           <ul class="contact-list">
             <li><span class="ic">{ICON['pin']}</span><div><small>Address</small><b>{ADDRESS}</b><br><small>Plus Code: PH3F+WJ Dhangadhi</small></div></li>
             <li><span class="ic">{ICON['phone']}</span><div><small>Mobile</small><a href="tel:{TEL_M}">{PHONE_M}</a></div></li>
+            <li><span class="ic">{ICON['chat']}</span><div><small>WhatsApp</small><a href="{WA}" rel="noopener noreferrer" target="_blank">{PHONE_M}<span class="sr-only"> (opens WhatsApp in a new tab)</span></a></div></li>
             <li><span class="ic">{ICON['phone']}</span><div><small>Landline</small><a href="tel:{TEL_L}">{PHONE_L}</a></div></li>
           </ul>
           <div class="actions">
             <a class="btn btn-green" href="{DIRECTIONS}" rel="noopener noreferrer" target="_blank">{ICON['arrow']}Get directions<span class="sr-only"> (opens Google Maps in a new tab)</span></a>
+          </div>
+          <div class="wa-box">
+            <h3>Message us on WhatsApp</h3>
+            <p>Ask about a watch, a repair or stock before you visit. Send photos of your watch if it needs fixing.</p>
+            <a class="btn btn-line" href="{WA}" rel="noopener noreferrer" target="_blank">{ICON['chat']}Chat on WhatsApp<span class="sr-only"> (opens WhatsApp in a new tab)</span></a>
           </div>
         </div>
         <div class="map" id="map">
@@ -309,7 +317,10 @@ PRIVACY = head("Privacy and cookie policy | Deepak Watch Center",
 
     <h2>What we collect</h2>
     <p>This website does not collect personal information. It has no contact form, no account sign-up, no newsletter and no online shop.</p>
-    <p>If you call us, we use your number only to answer you. We do not sell or share it.</p>
+    <p>If you call us or message us on WhatsApp, we use your number and message only to answer you. We do not sell or share them.</p>
+
+    <h2>WhatsApp</h2>
+    <p>The WhatsApp buttons open WhatsApp, which is run by Meta. Messages you send there are handled under <a href="https://www.whatsapp.com/legal/privacy-policy" rel="noopener noreferrer" target="_blank">WhatsApp's privacy policy<span class="sr-only"> (opens in a new tab)</span></a>. This website does not load any WhatsApp code.</p>
 
     <h2>Cookies</h2>
     <p>This website does not set any cookies and does not use analytics or advertising trackers. Because of this, we do not show a cookie banner.</p>
@@ -358,7 +369,7 @@ TERMS = head("Terms and conditions | Deepak Watch Center",
     <p>We are not liable for any loss caused by relying on information on this website. This does not limit any rights you have under Nepali law as a customer.</p>
 
     <h2 id="photo-credits">Photo credits</h2>
-    <p>Photos of the shop were taken and published by Deepak Watch Center. Example brand photos are from Unsplash and used under the Unsplash License: Casio G-Shock by Kilyan Sockalingum, Casio G-Shock close-up by Alexandru-Bogdan Ghita, gold Casio by Olga Nayda, silver Casio by Pavlo, Casio analog by Badreddine Farhi, Casio Edifice by Jayanth Muppaneni.</p>
+    <p>The photo of the shop was taken and published by Deepak Watch Center. Example brand photos are from Unsplash and used under the Unsplash License: Casio G-Shock by Kilyan Sockalingum, Casio G-Shock close-up by Alexandru-Bogdan Ghita, gold Casio by Olga Nayda, silver Casio by Pavlo, Casio analog by Badreddine Farhi, Casio Edifice by Jayanth Muppaneni.</p>
 
     <h2>Law</h2>
     <p>These terms are governed by the laws of Nepal.</p>

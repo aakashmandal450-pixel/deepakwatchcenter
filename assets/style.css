@@ -175,6 +175,9 @@ section.block{padding:clamp(72px,9vw,120px) 0}
 .contact-list .ic svg{width:20px;height:20px}
 .contact-list small{display:block;color:var(--muted);font-size:14px}
 .contact-list a{font-weight:700;font-size:20px;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--brass)}
+.wa-box{margin-top:32px;padding:26px;border:1px solid var(--line);border-radius:8px;background:#fff}
+.wa-box h3{font-size:26px;margin-bottom:8px}
+.wa-box p{color:var(--muted)}
 .map{background:var(--paper-2);border:1px solid var(--line);border-radius:6px;min-height:520px;display:grid;place-items:center;overflow:hidden;position:relative}
 .map-consent{max-width:400px;text-align:center;padding:32px}
 .map-consent svg{width:48px;height:48px;margin:0 auto 16px;color:var(--green)}

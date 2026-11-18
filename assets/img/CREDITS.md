@@ -1,6 +1,6 @@
 # Image credits
 
-Shop photos (storefront.jpg, wall-display.jpg):
+Shop photo (wall-display.jpg):
 uploaded by Deepak Watch Center to its own Google Business Profile.
 
 Brand photos from Unsplash (Unsplash License: free to use, including commercially):
