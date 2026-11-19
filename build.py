@@ -165,7 +165,7 @@ INDEX = head("Deepak Watch Center | Watches and watch repair in Dhangadhi",
         </div>
       </div>
       <figure class="hero-photo">
-        <img src="assets/img/wall-display.jpg" width="1524" height="1103" alt="Inside Deepak Watch Center: glass shelves holding hundreds of wristwatches, with wall clocks displayed above">
+        <img src="assets/img/shop-display.jpg" width="1672" height="941" alt="Inside Deepak Watch Center: glass shelves holding hundreds of wristwatches, with wall clocks displayed above">
         <figcaption><b>30+ years</b><span>of selling and repairing watches in Dhangadhi</span></figcaption>
       </figure>
     </div>

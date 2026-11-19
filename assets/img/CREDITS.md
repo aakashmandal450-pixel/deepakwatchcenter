@@ -2,7 +2,7 @@
 
 ## Shop's own photos
 Published by Deepak Watch Center on its own Google Business Profile:
-- wall-display.jpg (upscaled 2x with FSRCNN, denoised and colour-corrected)
+- shop-display.jpg (shop interior supplied by the owner, 19 November 2026)
 - millennium-colours.jpg, millennium-discs.jpg
 
 ## Photos supplied by the shop
